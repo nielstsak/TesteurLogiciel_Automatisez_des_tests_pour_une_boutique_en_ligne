@@ -16,7 +16,7 @@ describe('Functional Tests - Connexion', () => {
     });
   
     it('Should show error on invalid login', function() { // Utilise function() pour accéder à this.userData
-      cy.visit('/home/login');
+      cy.visit('/#/login');
       cy.get('[data-cy="login-input-username"]').type(this.userData.invalidEmail);
       cy.get('[data-cy="login-input-password"]').type(this.userData.invalidPassword);
       cy.get('[data-cy="login-submit"]').click();
