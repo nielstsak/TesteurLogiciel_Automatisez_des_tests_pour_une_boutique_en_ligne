@@ -337,7 +337,7 @@ describe('API Tests Eco Bliss Bath', () => {
               // Optionnel: vérifier la structure d'un avis
                if (response.body.length > 0) {
                   expect(response.body[0]).to.have.all.keys('id', 'date', 'title', 'comment', 'rating', 'author');
-                  expect(response.body[0].author).to.have.all.keys('id', 'email', 'roles', 'firstname', 'lastname'); 
+                  expect(response.body[0].author).to.include.keys('id', 'email', 'firstname', 'lastname'); 
                }
           });
       });

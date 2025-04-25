@@ -6,5 +6,5 @@ RUN npm ci
 
 COPY . .
 # RUN npm install
-EXPOSE 80
+EXPOSE 8080
 CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "8080"]

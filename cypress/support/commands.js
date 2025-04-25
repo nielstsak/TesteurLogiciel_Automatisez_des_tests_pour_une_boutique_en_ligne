@@ -11,7 +11,7 @@
 Cypress.Commands.add('loginViaApi', (email, password) => {
     cy.request({
       method: 'POST',
-      url: 'http://localhost:8081/login', // Assurez-vous que l'URL de base de l'API est correcte
+      url: 'http://localhost:8081/login', 
       body: {
         username: email,
         password: password,
@@ -24,7 +24,6 @@ Cypress.Commands.add('loginViaApi', (email, password) => {
       expect(response.body).to.have.property('token');
       // Stocker le token pour les requêtes suivantes si nécessaire
       Cypress.env('authToken', response.body.token);
-      // Optionnel : Stocker dans localStorage pour simuler la connexion dans le navigateur
       // window.localStorage.setItem('user', response.body.token);
       return response.body.token;
     });
@@ -89,12 +88,9 @@ Cypress.Commands.add('loginViaApi', (email, password) => {
       if (response.status === 200 && response.body && response.body.orderLines && response.body.orderLines.length > 0) {
         const lines = response.body.orderLines;
         // Supprimer chaque ligne de manière séquentielle
-        // Utilisation de Cypress.$each n'est pas adaptée ici car cy.request est asynchrone
-        // Une boucle récursive ou Promise.all est plus appropriée, mais pour la simplicité ici,
-        // on peut supposer qu'il n'y a qu'un petit nombre d'éléments ou accepter la sérialisation.
         const deleteLine = (index) => {
           if (index >= lines.length) {
-            return; // Toutes les lignes sont supprimées
+            return; 
           }
           const lineId = lines[index].id;
           cy.request({
