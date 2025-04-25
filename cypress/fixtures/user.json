@@ -1,0 +1,15 @@
+{
+    "email": "test2@test.fr",
+    "password": "testtest",
+    "invalidEmail": "invalid@test.fr",
+    "invalidPassword": "wrongpassword",
+    "firstname": "test",
+    "lastname": "test",
+    "address": "123 Test Street",
+    "zipCode": "75000",
+    "city": "Paris",
+    "newUserEmail": "newuser@test.fr",
+    "newUserPassword": "password123",
+    "newUserFirstname": "New",
+    "newUserLastname": "User"
+  }
