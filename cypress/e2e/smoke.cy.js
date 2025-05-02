@@ -4,11 +4,11 @@ describe('Smoke Tests Eco Bliss Bath', () => {
         // Se connecter via API pour les tests nécessitant authentification
         cy.fixture('user').then(user => {
            cy.loginViaApi(user.email, user.password).then(token => {
-              // Sauvegarde dans localStorage pour que l'UI Angular le reconnaisse
+              // Sauvegarde dans localStorage 
               localStorage.setItem('user', token);
            });
         });
-        cy.visit('/'); // Utilise baseUrl + hash routing si configuré
+        cy.visit('/'); // Utilise baseUrl 
     });
   
     it('Homepage - Should load essential elements', () => {
@@ -48,18 +48,18 @@ describe('Smoke Tests Eco Bliss Bath', () => {
        cy.get('[data-cy="detail-product-aromas"]').should('not.be.empty');
        cy.get('[data-cy="detail-product-ingredients"]').should('not.be.empty');
        cy.get('[data-cy="detail-product-price"]').should('contain', '€');
-       cy.get('[data-cy="detail-product-stock"]').should('contain', 'en stock'); // Vérifie la présence du texte "en stock" [cite: 24]
+       cy.get('[data-cy="detail-product-stock"]').should('contain', 'en stock'); // Vérifie la présence du texte "en stock" 
        cy.get('[data-cy="detail-product-quantity"]').should('be.visible');
-       cy.get('[data-cy="detail-product-add"]').should('be.visible'); // Bouton ajout panier présent car connecté [cite: 23]
+       cy.get('[data-cy="detail-product-add"]').should('be.visible'); // Bouton ajout panier présent car connecté 
     });
   
     it('Login Page - Should display login form elements', () => {
       // Se déconnecter d'abord (si la session persiste)
       window.localStorage.removeItem('user');
       cy.visit('/#/login');
-      cy.get('[data-cy="login-input-username"]').should('be.visible'); // Champ email [cite: 22]
-      cy.get('[data-cy="login-input-password"]').should('be.visible'); // Champ mot de passe [cite: 22]
-      cy.get('[data-cy="login-submit"]').should('be.visible'); // Bouton connexion [cite: 22]
+      cy.get('[data-cy="login-input-username"]').should('be.visible'); // Champ email 
+      cy.get('[data-cy="login-input-password"]').should('be.visible'); // Champ mot de passe 
+      cy.get('[data-cy="login-submit"]').should('be.visible'); // Bouton connexion 
     });
   
     it('Cart Page (when logged in and empty) - Should display empty message', () => {
