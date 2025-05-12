@@ -81,10 +81,4 @@ Cypress génère nativement :
 
 Vidéos : Des enregistrements vidéo de chaque exécution de test en mode cypress run. Par défaut, elles sont sauvegardées dans cypress/videos/.
 Captures d'écran : Des captures d'écran sont automatiquement prises en cas d'échec de test lors d'une exécution avec cypress run. Par défaut, elles sont sauvegardées dans cypress/screenshots/.
-Pour des rapports HTML plus élaborés (non configuré par défaut dans ce projet mais une pratique courante) :
-L'intégration d'un reporter comme mochawesome est recommandée. Cela impliquerait :
 
-Ajouter les dépendances nécessaires (ex: mochawesome, mochawesome-merge, mochawesome-report-generator).
-Configurer Cypress (dans cypress.config.js ou les fichiers de support) pour utiliser ce reporter.
-Après l'exécution des tests, utiliser des commandes pour fusionner les résultats JSON et générer le rapport HTML. Par exemple :
-Bash
