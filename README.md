@@ -41,12 +41,7 @@ Les scripts de test Cypress sont contenus dans ce dépôt.
 
 ### 4.1. Installation des Dépendances de Test
 
-1.  **Cloner ce dépôt de test** (si ce n'est pas déjà fait) :
-    ```bash
-    git clone <URL_DE_CE_DEPOT_DE_TESTS_CYPRESS>
-    cd <NOM_DU_DOSSIER_DE_CE_DEPOT_DE_TESTS>
-    ```
-2.  **Installer les dépendances Cypress** :
+   **Installer les dépendances Cypress** :
     À la racine de ce dépôt de tests (où se trouve le `package.json` listant Cypress), exécutez :
     ```bash
     npm install
