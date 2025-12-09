@@ -19,8 +19,8 @@ L'application EcoBlissBath (frontend Angular et backend Symfony) est conçue pou
 
 1.  **Cloner le dépôt principal de l'application** (si ce n'est pas déjà fait) :
     ```bash
-    git clone <URL_DU_DEPOT_ECOBLISSBATH_AVEC_DOCKER-COMPOSE.YML>
-    cd <NOM_DU_DOSSIER_DU_PROJET_ECOBLISSBATH>
+    git clone <https://github.com/nielstsak/TesteurLogiciel_Automatisez_des_tests_pour_une_boutique_en_ligne.git>
+    cd <TesteurLogiciel_Automatisez_des_tests_pour_une_boutique_en_ligne>
     ```
 
 2.  **Construire et lancer les conteneurs Docker** :
